@@ -1,0 +1,51 @@
+dense_features:
+  cache_format: chunked
+  dtype: half
+  load_cache_on_init: false
+  overwrite_cache: true
+  patch_size: 8
+  sparse: true
+  use_cache: true
+interpolation:
+  mode: BICUBIC
+  nodes:
+  - - 0.0
+    - 0.0
+localization:
+  dense_features: ${..dense_features}
+  interpolation: ${..interpolation}
+mapping:
+  BA:
+    apply: true
+    costmaps:
+      num_threads: -1
+    level_indices: null
+    max_tracks_per_problem: 100
+    num_threads: -1
+    optimizer:
+      loss:
+        name: cauchy
+        params:
+        - 0.25
+      print_summary: false
+      refine_extra_params: true
+      refine_extrinsics: true
+      refine_focal_length: true
+      refine_principal_point: false
+    references:
+      keep_observations: false
+    repeats: 1
+    strategy: costmaps
+  KA:
+    apply: true
+    max_kps_per_problem: 1000
+    optimizer:
+      bound: 2.0
+      num_threads: -1
+      print_summary: false
+      solver:
+        parameter_tolerance: 1.0e-05
+    split_in_subproblems: true
+    strategy: topological_reference
+  dense_features: ${..dense_features}
+  interpolation: ${..interpolation}
