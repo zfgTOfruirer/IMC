@@ -1,6 +1,6 @@
 ﻿**Kaggle:** **Image Matching Challenge 2024 - Hexathlon 解决方案**
 
-比赛结果：排名top 2.5%，获得银牌。
+**比赛结果：**排名top 2.5%，获得银牌。
 
 成员laplace\_zfg，noshakeplz，Emily，Yinghao，Wang。
 
