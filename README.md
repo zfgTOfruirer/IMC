@@ -12,8 +12,7 @@
 
 
 
-成员laplace\_zfg，noshakeplz，Emily，Yinghao，Wang。
-
+成员：laplace\_zfg，noshakeplz，Emily，Yinghao，Wang。
 作者（laplace\_zfg）主要负责其中，图像特征匹配，以及3D重建。具体由SuperGlue 模型完成特征匹配，PixSfM算法对完成特征匹配得到得关键点进行3D重建生成稀疏模型。实际实验中发现SuperGlue的加入使整个推理运行时间太长，超过了kaggle限定的推理时间，因此后续采用LightGlue完成模型的特征匹配。并且为提高鲁棒性，应对赛题对于不同场景3D重建的需求，加入Hloc算法，确保在不同条件下均能得到高质量的重建结果
 
 
