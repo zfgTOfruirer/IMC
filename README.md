@@ -12,7 +12,8 @@
 
 
 
-成员：laplace\_zfg，noshakeplz，Emily，Yinghao，Wang。
+
+成员laplace\_zfg，noshakeplz，Emily，Yinghao，Wang。
 
 作者（laplace\_zfg）主要负责其中，图像特征匹配，以及3D重建。具体由SuperGlue 模型完成特征匹配，PixSfM算法对完成特征匹配得到得关键点进行3D重建生成稀疏模型。实际实验中发现SuperGlue的加入使整个推理运行时间太长，超过了kaggle限定的推理时间，因此后续采用LightGlue完成模型的特征匹配。并且为提高鲁棒性，应对赛题对于不同场景3D重建的需求，加入Hloc算法，确保在不同条件下均能得到高质量的重建结果
 
@@ -142,15 +143,29 @@
 
 #### **3. 最终3D重建效果**
 
+**多个角度拍摄的原图（提交的测试集输入）**
+
+<div align="center">
+  <img src="images/3D_original.png" alt="IMC银牌"   width="50%"/>
+</div>
+
+**3D重建稀疏模型**
+
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="images/3D_0.png" alt="效果0" width="33.3%" />
+  <img src="images/3D_1.png" alt="效果1" width="33.3%" />
+  <img src="images/3D_2.png" alt="效果2" width="33.3%" />
+</div>
 
 
 
-
-
+**完成3D稀疏模型的重建后，最终提交的文件应包含每个测试图像的姿态信息（即相机在拍摄该图像时的外部参数，包括旋转矩阵和平移向量）。核心评估指标是相机中心位置的平均准确性 (mean Average Accuracy, mAA)。**
 
 
 
 ## **项目目录结构：**
+
+
 
 **lib:相关依赖包**
 
