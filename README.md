@@ -152,9 +152,9 @@
 **3D重建稀疏模型**
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="images/3D_0.png" alt="效果0" width="33%" />
-  <img src="images/3D_1.png" alt="效果1" width="33%" />
-  <img src="images/3D_2.png" alt="效果2" width="33%" />
+  <img src="images/3D_0.png" alt="效果0" width="32%" />
+  <img src="images/3D_1.png" alt="效果1" width="32%" />
+  <img src="images/3D_2.png" alt="效果2" width="32%" />
 </div>
 
 
